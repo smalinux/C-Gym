@@ -5,38 +5,42 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#define NELEMS 7
 
 typedef struct MyData {
-   //int x;
-
    int* (*AddOne) (int * x);
    int* (*Square) (int * x);
    int* (*SubtractTen) (int * x);
    void (*ForEach) (int * x);
 } MyData;
 
-int* AddOne(int* x) {
-   (*x) +=1;
+int* AddOne(int x[]) {
+   for(int i = 0; i < NELEMS; ++i)
+      (x[i]) +=1;
    return x;
 }
 
-int* Square(int* x) {
-   (*x) *=(*x);
+int* Square(int x[]) {
+   for(int i = 0; i < NELEMS; ++i)
+      (x[i]) *=(x[i]);
    return x;
 }
 
-int* SubtractTen(int* x) {
-   (*x) -= 10;
+int* SubtractTen(int x[]) {
+   for(int i = 0; i < NELEMS; ++i)
+      (x[i]) -= 10;
    return x;
 }
 
-void ForEach(int* x) {
-   printf("%d\n", *x);
+void ForEach(int x[]) {
+   for(int i = 0; i < NELEMS; ++i)
+      printf("%d\n", x[i]);
 }
 
 int main()
 {
-   int x = 7;
+   int List[] = {7, 4, 5, 6, 3, 8, 10};
 
    MyData myData = {
       .AddOne = AddOne,
@@ -45,13 +49,11 @@ int main()
       .ForEach = ForEach,
    };
 
-   //
-   //myData.AddOne(&x)->myData.ForEach(&x);
    //ToList();
-   myData.AddOne(&x);
-   myData.Square(&x);
-   myData.SubtractTen(&x);
-   myData.ForEach(&x);
+   myData.AddOne(List);
+   myData.Square(List);
+   myData.SubtractTen(List);
+   myData.ForEach(List);
 
    return 0;
 }
