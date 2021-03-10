@@ -5,6 +5,7 @@ https://stackoverflow.com/a/17053751/5688267
 // but not perfect.
 // I want these functions to be private.
 // ...
+// Another to similar example: https://stackoverflow.com/a/1350409/5688267
 ********************************************/
 #include <stdio.h>
 

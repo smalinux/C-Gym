@@ -49,7 +49,6 @@ int main()
       .ForEach = ForEach,
    };
 
-   //ToList();
    myData.AddOne(List);
    myData.Square(List);
    myData.SubtractTen(List);

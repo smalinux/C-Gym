@@ -1,0 +1,22 @@
+******************************************
+Mix functions with structs
+******************************************
+
+You cannot have functions in structs in C; you can try to roughly simulate that
+by function pointers though.
+– Fingolfin
+-- https://stackoverflow.com/questions/17052443/c-function-inside-struct#comment24655474_17052443
+
+There is no pass by reference is C. You are passing a copy of the pointer, the
+references of the pointer are the same, but the pointers itself no.
+– Sergeant Cortez
+-- https://stackoverflow.com/a/65369215/5688267
+
+Javascript-like style in C! :
+https://stackoverflow.com/a/32964582/5688267
+
+
+
+References:
+* https://stackoverflow.com/questions/840501/how-do-function-pointers-in-c-work/
+*

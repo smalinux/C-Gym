@@ -51,24 +51,6 @@ static inline bool String_startsWith(const char* s, const char* match) {
    return strncmp(s, match, strlen(match)) == 0;
 }
 
-#define tryRead(label, variable)                                         \
-   if (String_startsWith(buffer, label)) {                               \
-      sscanf(buffer + strlen(label), " %s", variable);          \
-      break;                                                             \
-   }
-#define tryReadx(label, variable)                                         \
-   if (String_startsWith(buffer, label)) {                               \
-      sscanf(buffer + strlen(label), " %*2u %32llu", variable);          \
-      break;                                                             \
-   }
-#define tryReadFlag(label, variable, flag)                               \
-   if (String_startsWith(buffer, label)) {                               \
-      (flag) = sscanf(buffer + strlen(label), " %*2u %32llu", variable); \
-      break;                                                             \
-   }
-
-
-
 Plugins_meterData* getPluginsData(void) {
    Plugins_meterData * pdata = calloc(1, sizeof(Plugins_meterData));
 
@@ -157,6 +139,7 @@ int main(void) {
       }
 
    }
+   // --------------------- start read multi files dynamically.
 
    return 0;
 }
