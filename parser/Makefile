@@ -1,2 +1,2 @@
 all:
-	gcc -o parser parser.c
+	gcc -o parser.o parser.c

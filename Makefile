@@ -1,3 +1,3 @@
 all:
-	gcc -o main main.c
-	gcc -o declarative declarative.c
+	gcc -o main.o main.c
+	gcc -o declarative.o declarative.c
