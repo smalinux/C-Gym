@@ -5,3 +5,4 @@ all:
 	gcc -o assignArr.o assignArr.c 	# this solution compatipile with C11 only.
 	gcc -o myInitArr.o myInitArr.c 	# make your own flexibule version. Wow, this works with any version ..
 	gcc -o dynamicArr.o dynamicArr.c # in C, how we manipulat array. but not normal arrays. dynamic alloc arrays.
+	gcc -o loop1.o loop1.c # Is there infinite loop with negatives && size_t

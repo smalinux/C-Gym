@@ -22,9 +22,10 @@
 # distributions musl is available as packages 'musl', 'musl-dev',
 # 'musl-tools'. Other Linux distributions such as Alpine directly ship
 # with musl as their C library.
-CC = /usr/local/musl/bin/musl-gcc
+#CC = /usr/bin/musl-gcc
+#CC = /usr/local/musl/bin/musl-gcc
 #CC = clang
-#CC = gcc
+CC = gcc
 #CC = icc
 #CC = c99
 
