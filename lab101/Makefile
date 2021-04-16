@@ -7,3 +7,4 @@ all:
 	gcc -o dynamicArr.o dynamicArr.c # in C, how we manipulat array. but not normal arrays. dynamic alloc arrays.
 	gcc -o loop1.o loop1.c # Is there infinite loop with negatives && size_t
 	gcc -o do-while-false-trick.o do-while-false-trick.c
+	gcc -o macro-fucks-you.o macro-fucks-you.c
