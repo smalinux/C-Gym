@@ -8,3 +8,5 @@ all:
 	gcc -o loop1.o loop1.c # Is there infinite loop with negatives && size_t
 	gcc -o do-while-false-trick.o do-while-false-trick.c
 	gcc -o macro-fucks-you.o macro-fucks-you.c
+	gcc -o double_swap.o double_swap.c
+	gcc -o struct-101.o struct-101.c 	# struct - basics
