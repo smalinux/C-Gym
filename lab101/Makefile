@@ -10,3 +10,5 @@ all:
 	gcc -o macro-fucks-you.o macro-fucks-you.c
 	gcc -o double_swap.o double_swap.c
 	gcc -o struct-101.o struct-101.c 	# struct - basics
+	gcc -o struct-102.o struct-102.c 	# Nested structs
+
