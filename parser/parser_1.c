@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h> // For exit() function
 int main() {
-    char c[1000],x[1];
+    char c[1000];
     FILE *fptr;
     if ((fptr = fopen("program.txt", "r")) == NULL) {
         printf("Error! File cannot be opened.");
@@ -10,7 +10,7 @@ int main() {
     }
 
     // reads text until newline is encountered
-    fscanf(fptr, "%s = %[^\n]",x ,c);
+    fscanf(fptr, "%*s = %[^\n]", c);
     printf("Data from the file:\n%s", c);
     fclose(fptr);
 
